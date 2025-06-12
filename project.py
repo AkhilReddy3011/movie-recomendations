@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 import seaborn as sns
 import matplotlib.pyplot as plt
-df = pd.read_csv("movies_metadata.csv", low_memory=False)
+df = pd.read_csv("movies_data.csv", low_memory=False)
 df.columns
 movies = df[['title', 'genres', 'vote_average', 'popularity']].copy()
 movies = movies.dropna(subset=['genres', 'vote_average', 'popularity'])
